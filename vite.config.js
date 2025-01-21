@@ -1,6 +1,9 @@
+import glsl from 'vite-plugin-glsl';
+
 export default {
     root: 'src/', // Sources files (typically where index.html is)
-    publicDir: '../static/', // Path from "root" to static assets (files that are served as they are)
+    publicDir: '../public/', // Path from "root" to static assets (files that are served as they are)
+    plugins: [glsl()], // Plugin for glsl shaders
     server:
     {
         host: true, // Open to local network and display URL
@@ -11,6 +14,7 @@ export default {
         emptyOutDir: true, // Empty the folder first
         sourcemap: true // Add sourcemap
     },
+
     // resolve:
     // {
     //     alias:
